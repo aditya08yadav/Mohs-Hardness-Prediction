@@ -1,0 +1,27 @@
+DATA AND IMPLEMENTATION PROVENANCE
+
+Task and original distribution:
+https://www.kaggle.com/competitions/playground-series-s3e25
+
+Public CSV mirror used in this project (fixed revision):
+https://github.com/Abhinandan57/Kaggle_Competition_MohsHardness/tree/6381c7f2738834d5b99efb004926ae2b7e437162
+
+Included files: train.csv, test.csv, sample_submission.csv.
+The byte-identical copies used in the executed project are included for local
+reproduction. SHA-256 hashes are recorded in data_checksums.json. The dataset
+is an externally supplied synthetic benchmark, not data collected by this project.
+Dataset terms are governed by the source distribution; this package does not
+grant a new licence over externally supplied data.
+
+The main implementation was written for this project with AI assistance.
+The reference author's notebook uses a different Random Forest/PCA search
+workflow. This project instead uses four fixed model families, nested training
+transformations inside development folds, a separate original holdout evaluation,
+error diagnostics, and a subsequent development-only PCA comparison.
+No reference-author notebook is included in this code package.
+
+Technical references:
+https://scikit-learn.org/stable/modules/cross_validation.html
+https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html
+https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.HistGradientBoostingRegressor.html
+https://scikit-learn.org/stable/modules/permutation_importance.html
